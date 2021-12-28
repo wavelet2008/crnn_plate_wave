@@ -1,4 +1,4 @@
-
+--------------------2021/12/28
 1.修改轻量级网络：
 
 crnn/models/ltecrnn.py   为了更好支持ncnn 推理   剔除了nn.Linear 更换成conv2d, 不然要Pnnx 还是有不少折腾
@@ -13,11 +13,14 @@ crnn/data/dataset.py
 
 
 
+4  96ttonnx.py   生成crnn.onnx
+
+5  crnn.onnx--->crnn.parma 优化的时候注意 
+
+Permute                  Transpose_25             1 1 89 output 0=3    0=3 要修改啊
 
 
-
-
-
+--------------------------------------------------------
 
 
 

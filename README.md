@@ -1,3 +1,31 @@
+
+1.修改轻量级网络：
+
+crnn/models/ltecrnn.py   为了更好支持ncnn 推理   剔除了nn.Linear 更换成conv2d, 不然要Pnnx 还是有不少折腾
+
+2.
+crnn/data/dataset.py
+       添加数据 RotR函数 透视变换，
+       读取  __getitem__   一个车牌多张图片读取修改 
+       添加空字符序列
+ 
+3.gregenplate 添加模拟产生车牌 蓝牌 新能源车牌  黄牌模拟生成 ；  reformat_CCPD 从ccpd 生成车牌
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # CRNN_pytorch
 
 **文本识别分为两部分：文本定位与文本序列识别。这个repo主要是做的后者。**
